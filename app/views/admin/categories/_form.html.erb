@@ -1,0 +1,9 @@
+<%= form_for [:admin, @category] do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <%= f.file_field :category_img %>
+  <%= f.text_field :name, class: "form-control",
+    placeholder: t("category_name") %>
+  <%= f.text_area :description, class: "form-control",
+    placeholder: t("category_description") %>
+  <%= f.submit yield(:button_text), class: "btn btn-primary text-center" %>
+<% end %>

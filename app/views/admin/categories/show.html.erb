@@ -1,0 +1,30 @@
+<div class="container show_img">
+  <div class="row category-info">
+    <div class="col-md-4">
+      <%= image_tag @category.category_img.url(:category_show),
+        class: "category_img_show"%>
+    </div>
+    <div class="col-md-8">
+      <h4><%= @category.name %></h4>
+      <p><%= @category.description %></p>
+      <%= link_to t("edit"), edit_admin_category_path(@category),
+        class: "button button_edit" %>
+      <%= link_to t("delete"), admin_category_path(@category), method: :delete,
+        data: {confirm: t("delete_message")}, class: "button button_delete" %>
+      <%= link_to t("back"), admin_categories_path,
+        class: "button button_back" %>
+    </div>
+  </div>
+  <div class="row">
+    <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th class="header-table"><%= t "word_id"%></th>
+        <th class="header-table"><%= t "word"%></th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  </div>
+</div>

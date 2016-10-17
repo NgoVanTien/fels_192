@@ -1,5 +1,13 @@
 class UsersController < ApplicationController
-  before_action :load_user, only: [:show, :edit, :update]
+  before_action :load_user, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:index, :destroy]
+  before_action :verify_user, only: [:edit, :update]
+  before_action :verify_admin, only: :destroy
+
+  def index
+    @users = User.order_name.paginate page: params[:page],
+      per_page: Settings.per_page.users
+  end
 
   def show
   end
@@ -29,6 +37,15 @@ class UsersController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    if @user.destroy
+      flash[:success] = t "delete_user"
+    else
+      flash[:warning] = t "delete_user_fail"
+    end
+    redirect_to :back
   end
 
   private

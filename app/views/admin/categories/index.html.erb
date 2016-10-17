@@ -1,0 +1,27 @@
+<div class="container category">
+  <div class="search-form">
+    <%= render "search_form" %>
+  </div>
+  <div class="row">
+    <% @categories.each do |category| %>
+      <div class="col-sm-3">
+        <div class="thumbnail">
+          <%= image_tag category.category_img.url(:category_index),
+            class: "category_img_index"%>
+          <h4 class="text-center"><%= category.name %></h4>
+          <div class="button_inline">
+            <%= link_to t("view"), admin_category_path(category),
+              class: "button_view button" %>
+            <%= link_to t("edit"), edit_admin_category_path(category),
+              class: "button_edit button" %>
+            <%= link_to t("delete"), admin_category_path(category),
+              class: "button_delete button", method: :delete,
+              data: {confirm: t("delete_message")} %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <%= will_paginate @categories %>
+  </div>
+  <%= link_to t("category_add"), new_admin_category_path %>
+</div>

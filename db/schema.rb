@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161008095433) do
+ActiveRecord::Schema.define(version: 20161013083807) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id"
@@ -34,8 +34,12 @@ ActiveRecord::Schema.define(version: 20161008095433) do
   create_table "categories", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.string   "category_img_file_name"
+    t.string   "category_img_content_type"
+    t.integer  "category_img_file_size"
+    t.datetime "category_img_updated_at"
   end
 
   create_table "lessons", force: :cascade do |t|
@@ -74,9 +78,9 @@ ActiveRecord::Schema.define(version: 20161008095433) do
     t.string   "email"
     t.string   "password_digest"
     t.string   "avatar"
-    t.boolean  "is_admin"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.boolean  "is_admin",        default: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

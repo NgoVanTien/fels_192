@@ -2,14 +2,19 @@ source "https://rubygems.org"
 
 gem "rails", "~> 5.0.0", ">= 5.0.0.1"
 gem "bcrypt", "3.1.11"
+gem "faker", "1.6.6"
+gem "will_paginate", "3.1.0"
+gem "bootstrap-will_paginate", "0.0.10"
 gem "bootstrap-sass", "3.3.6"
 gem "puma", "~> 3.0"
+gem "paperclip", "~> 5.1"
 gem "sass-rails", "~> 5.0"
 gem "uglifier", ">= 1.3.0"
 gem "coffee-rails", "~> 4.2"
 gem "jquery-rails"
 gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"
+gem "config"
 
 group :development, :test do
   gem "byebug", platform: :mri
