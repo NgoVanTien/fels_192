@@ -171,10 +171,13 @@ aside {
   }
 }
 
-.gravatar {
-  float: left;
-  margin-right: 10px;
+.w3-padding-16 {
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+  }
 }
+
 
 .gravatar_edit {
   margin-top: 15px;
@@ -486,7 +489,6 @@ input {
 }
 
 .sidebar-nav {
-  position: absolute;
   top: 0;
   width: 250px;
   margin: 0;
@@ -897,4 +899,56 @@ panel-heading{
   padding-left: 20px;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.style-user {
+  text-align: center;
+  .gravatar {
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
+  }
+
+  .gravatar_edit {
+    margin-top: 15px;
+  }
+
+  .stats {
+    overflow: auto;
+    margin-top: 0;
+    padding: 0;
+    a {
+      width: 50%;
+      float: left;
+      padding: 0 10px;
+      border-left: 1px solid $gray-lighter;
+      color: gray;
+      &:first-child {
+        padding-left: 0;
+        border: 0;
+      }
+      &:hover {
+        text-decoration: none;
+        color: blue;
+      }
+    }
+    strong {
+      display: block;
+    }
+  }
+
+  .user_avatars {
+    overflow: auto;
+    margin-top: 10px;
+    .gravatar {
+      margin: 1px 1px;
+    }
+    a {
+      padding: 0;
+    }
+  }
+
+  .users.follow {
+    padding: 0;
+  }
 }

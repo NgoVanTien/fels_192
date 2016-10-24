@@ -10,6 +10,10 @@ class UsersController < ApplicationController
   end
 
   def show
+    @count_following = @user.following.size
+    @count_followers = @user.followers.size
+    @count_following_cr = current_user.following.size
+    @count_followers_cr = current_user.followers.size
   end
 
   def new
