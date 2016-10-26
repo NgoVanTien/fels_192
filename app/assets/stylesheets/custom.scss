@@ -952,3 +952,44 @@ panel-heading{
     padding: 0;
   }
 }
+.panel-green {
+  border-color: #5cb85c;
+  .panel-heading {
+    border-color: #5cb85c;
+    color: white;
+    background-color: #5cb85c;
+  }
+}
+
+.panel-yellow {
+    border-color: #f0ad4e;
+  .panel-heading {
+    border-color: #f0ad4e;
+    color: white;
+    background-color: #f0ad4e;
+  }
+}
+
+.panel-red {
+  border-color: #d9534f;
+  .panel-heading {
+    border-color: #d9534f;
+    color: white;
+    background-color: #d9534f;
+  }
+}
+
+.row-home {
+  margin-top: 100px;
+}
+
+.well-home {
+  margin-top: 100px;
+}
+
+.checkbox{
+  .remember {
+    margin-left: -73px !important;
+    margin-top: 0px !important;
+  }
+}

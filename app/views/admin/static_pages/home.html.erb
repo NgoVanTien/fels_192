@@ -1,0 +1,131 @@
+<% provide :title, t("word_show_title") %>
+<div id="wrapper" >
+  <%= render "layouts/admin/menu" %>
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 back-row-home">
+          <div class="w3-container">
+            <div class="row row-home">
+              <div class="col-lg-3 col-md-6">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <div class="row">
+                      <div class="col-xs-3">
+                        <i class="fa fa-comments fa-5x"></i>
+                      </div>
+                      <div class="col-xs-9 text-right">
+                        <div class="huge"><%= t "home_num_user" %></div>
+                        <div><%= t "home_user" %></div>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#">
+                    <div class="panel-footer">
+                      <span class="pull-left">
+                        <%= link_to t(:menu_users), users_path %>
+                      </span>
+                      <span class="pull-right">
+                        <i class="fa fa-arrow-circle-right"></i>
+                      </span>
+                      <div class="clearfix"></div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="panel panel-green">
+                  <div class="panel-heading">
+                    <div class="row">
+                      <div class="col-xs-3">
+                        <i class="fa fa-tasks fa-5x"></i>
+                      </div>
+                      <div class="col-xs-9 text-right">
+                        <div class="huge"><%= t "home_num_words" %></div>
+                        <div><%= t "home_user" %></div>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#">
+                    <div class="panel-footer">
+                      <span class="pull-left">
+                        <%= link_to t(:menu_words), admin_words_path %>
+                      </span>
+                      <span class="pull-right">
+                        <i class="fa fa-arrow-circle-right"></i>
+                      </span>
+                      <div class="clearfix"></div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="panel panel-yellow">
+                  <div class="panel-heading">
+                    <div class="row">
+                      <div class="col-xs-3">
+                        <i class="fa fa-shopping-cart fa-5x"></i>
+                      </div>
+                      <div class="col-xs-9 text-right">
+                        <div class="huge"><%= t "home_num_category" %></div>
+                        <div><%= t "home_user" %></div>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#">
+                    <div class="panel-footer">
+                      <span class="pull-left">
+                        <%= link_to t(:admin_category), admin_categories_path %>
+                      </span>
+                      <span class="pull-right">
+                        <i class="fa fa-arrow-circle-right"></i>
+                      </span>
+                      <div class="clearfix"></div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="panel panel-red">
+                  <div class="panel-heading">
+                    <div class="row">
+                      <div class="col-xs-3">
+                        <i class="fa fa-support fa-5x"></i>
+                      </div>
+                      <div class="col-xs-9 text-right">
+                        <div class="huge"><%= t "home_num_category" %>
+                        </div>
+                        <div><%= t "home_user" %></div>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#">
+                    <div class="panel-footer">
+                      <span class="pull-left">
+                        <%= link_to t(:admin_category), admin_categories_path %>
+                      </span>
+                      <span class="pull-right">
+                        <i class="fa fa-arrow-circle-right"></i>
+                      </span>
+                      <div class="clearfix"></div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="well well-home">
+            <h4><%= t "word_framgia" %></h4>
+            <p><%= t "word_framgia_list" %><a target="_blank"
+              href="http://recruit.framgia.vn/"><%= t "word_framgia_url" %>
+              </a>.
+            </p>
+            <a class="btn btn-default btn-lg btn-block"
+              target="_blank" href="http://framgia.com/jp/">
+              <%= t "word_framgia_home" %></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
