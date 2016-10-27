@@ -1,0 +1,15 @@
+<div class="stats">
+  <a href="<%= user_following_index_path current_user %>">
+    <strong id="following-cr" class="stat">
+      <%= @count_following_cr %>
+    </strong>
+    <%= t "following" %>
+  </a>
+  <a href="<%= user_followers_path current_user %>">
+    <strong id="followers-cr" class="stat">
+      <%=  @count_followers_cr %>
+    </strong>
+    <%= t "followers" %>
+  </a>
+</div>
+

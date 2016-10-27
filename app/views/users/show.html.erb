@@ -1,10 +1,24 @@
 <% provide :title, @user.name %>
 <div id="wrapper" >
-  <% if current_user.is_admin? && !current_user.is_user?(@user) %>
-    <%= render "layouts/admin/menu.html.erb" %>
-  <% else %>
-    <%= render "layouts/menu.html.erb" %>
-  <% end %>
+  <%= render "layouts/menu.html.erb" %>
   <div id="page-content-wrapper">
+    <div class="row">
+      <aside class="col-md-4">
+        <section>
+          <%= render "follow_form" if logged_in? %>
+        </section>
+        <section>
+          <h1>
+            <%= gravatar_for @user %>
+            <%= @user.name %>
+          </h1>
+        </section>
+        <section class="stats">
+          <%= render "shared/stats" %>
+        </section>
+      </aside>
+      <div class="col-md-8">
+      </div>
+    </div>
   </div>
 </div>
