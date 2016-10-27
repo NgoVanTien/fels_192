@@ -5,12 +5,9 @@
   margin-bottom: 0;
   background-color: #4257B2;
   border: 0;
-  font-size: 11px !important;
+  font-size: 13px !important;
   letter-spacing: 4px;
-  font-family: -apple-system, BlinkMacSystemFont,
-  "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-  "Fira Sans", "Droid Sans", "Helvetica Neue",
-  sans-serif;
+  font-family: "Lalezar", cursive;
 }
 
 .navbar li a, .navbar .navbar-brand {
@@ -78,16 +75,6 @@
 .thumbnail p {
   margin-top: 5px;
   color: #555;
-}
-
-.thumbnail {
-  .btn {
-    padding: 10px 20px;
-    background-color: #3CCFCF;
-    color: #f1f1f1;
-    border-radius: 0;
-    transition: .2s;
-  }
 }
 
 .btn:hover, .btn:focus {
@@ -382,14 +369,11 @@ input {
 }
 
 .button{
-  padding: 5px;
+  padding: 5px 7px;
   color: white;
   text-align: center;
   font-size: 18px;
   line-height: 50px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
 }
 .button_view {
   background-color: #52B3D6;
@@ -732,4 +716,185 @@ p1 {
   p {
     margin: 40px 150px 50px;
   }
+}
+
+.panel{
+  border-radius:0px;
+  padding: 0px;
+  border: none;
+}
+
+.category_info{
+  background-color: #fff;
+  padding: 20px;
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.category_img_show {
+  padding: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+btn-flip {
+  height: 50px !important;
+  padding: 0px !important;
+  -webkit-perspective: 600;
+  -moz-perspective: 600;
+  -ms-perspective: 600;
+  -o-perspective: 600;
+  perspective: 600;
+  position: relative;
+  width: 150px !important;
+}
+
+.btn-flip .flip {
+  height: 100%;
+  position: absolute;
+  margin-top: -10px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  width: 100%;
+}
+
+.btn-flip .flip:hover {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.btn-flip .flip .side {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.btn-flip .flip .back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.btn-3d {
+  font-weight: bold !important;
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  -ms-border-radius: 10px !important;
+  -o-border-radius: 10px !important;
+  border-radius: 10px !important;
+}
+
+.btn-3d:active {
+  outline: none !important;
+  position: relative;
+  top: 2px;
+}
+
+.btn-3d.btn-primary,
+.label-3d.label-primary,
+.alert-3d.alert-primary {
+  -webkit-box-shadow: inset 0px 0px 0px #007299, 0px 5px 0px 0px #007299,
+    0px 10px 5px #999 !important;
+  -moz-box-shadow: inset 0px 0px 0px #007299, 0px 5px 0px 0px #007299,
+    0px 10px 5px #999 !important;
+  -ms-box-shadow: inset 0px 0px 0px #007299, 0px 5px 0px 0px #007299,
+    0px 10px 5px #999 !important;
+  -o-box-shadow: inset 0px 0px 0px #007299, 0px 5px 0px 0px #007299,
+    0px 10px 5px #999 !important;
+  box-shadow: inset 0px 0px 0px #007299, 0px 5px 0px 0px #007299,
+    0px 10px 5px #999 !important;
+}
+
+
+.btn-3d.btn-success,
+.label-3d.label-success,
+.alert-3d.alert-success {
+  -webkit-box-shadow: inset 0px 0px 0px #1DAA3F, 0px 5px 0px 0px #1DAA3F,
+    0px 10px 5px #999;
+  -moz-box-shadow: inset 0px 0px 0px #1DAA3F, 0px 5px 0px 0px #1DAA3F,
+    0px 10px 5px #999;
+  -ms-box-shadow: inset 0px 0px 0px #1DAA3F, 0px 5px 0px 0px #1DAA3F,
+    0px 10px 5px #999;
+  -o-box-shadow: inset 0px 0px 0px #1DAA3F, 0px 5px 0px 0px #1DAA3F,
+    0px 10px 5px #999;
+  box-shadow: inset 0px 0px 0px #1DAA3F, 0px 5px 0px 0px #1DAA3F,
+    0px 10px 5px #999;
+}
+
+.btn-3d.btn-danger,
+.label-3d.label-danger,
+.alert-3d.alert-danger {
+  -webkit-box-shadow: inset 0px 0px 0px #E43927, 0px 5px 0px 0px #E43927,
+    0px 10px 5px #999;
+  -moz-box-shadow: inset 0px 0px 0px #E43927, 0px 5px 0px 0px #E43927,
+    0px 10px 5px #999;
+  -ms-box-shadow: inset 0px 0px 0px #E43927, 0px 5px 0px 0px #E43927,
+    0px 10px 5px #999;
+  -o-box-shadow: inset 0px 0px 0px #E43927, 0px 5px 0px 0px #E43927,
+    0px 10px 5px #999;
+  box-shadow: inset 0px 0px 0px #E43927, 0px 5px 0px 0px #E43927,
+    0px 10px 5px #999;
+}
+
+.btn-3d.btn-warning,
+.label-3d.label-warning,
+.alert-3d.alert-warning {
+  -webkit-box-shadow: inset 0px 0px 0px #D49236, 0px 5px 0px 0px #D49236,
+    0px 10px 5px #999;
+  -moz-box-shadow: inset 0px 0px 0px #D49236, 0px 5px 0px 0px #D49236,
+    0px 10px 5px #999;
+  -ms-box-shadow: inset 0px 0px 0px #D49236, 0px 5px 0px 0px #D49236,
+    0px 10px 5px #999;
+  -o-box-shadow: inset 0px 0px 0px #D49236, 0px 5px 0px 0px #D49236,
+    0px 10px 5px #999;
+  box-shadow: inset 0px 0px 0px #D49236, 0px 5px 0px 0px #D49236,
+    0px 10px 5px #999;
+}
+
+.btn-3d.btn-default,
+.label-3d.label-default,
+.alert-3d.alert-default {
+  -webkit-box-shadow: inset 0px 0px 0px #7B7474, 0px 5px 0px 0px #7B7474,
+    0px 10px 5px #999;
+  -moz-box-shadow: inset 0px 0px 0px #7B7474, 0px 5px 0px 0px #7B7474,
+    0px 10px 5px #999;
+  -ms-box-shadow: inset 0px 0px 0px #7B7474, 0px 5px 0px 0px #7B7474,
+    0px 10px 5px #999;
+  -o-box-shadow: inset 0px 0px 0px #7B7474, 0px 5px 0px 0px #7B7474,
+    0px 10px 5px #999;
+  box-shadow: inset 0px 0px 0px #7B7474, 0px 5px 0px 0px #7B7474,
+    0px 10px 5px #999;
+}
+
+panel-heading{
+  line-height: 1.42857143 !important;
+  color: #58666e !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.panel-heading,.fc-head{
+  padding: 0px;
+  background: #F9F9F9;
+  padding: 5px;
+  padding-left: 20px;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

@@ -1,39 +1,49 @@
 <% provide :title, t("lesson_title") %>
-<div class="container">
-  <div class="lessons">
-    <div class="table-responsive">
-      <table class="table">
-        <thead>
-          <tr>
-            <th><%= t "lesson_create_at" %></th>
-            <th><%= t "lesson_category" %></th>
-            <th><%= t "lesson_score" %></th>
-            <th><%= t "lesson_action" %></th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @lessons.each do |lesson| %>
-            <tr>
-              <td>
-                <%= l lesson.created_at, format: :long %>
-              </td>
-              <td><%= lesson.category.name %></td>
-              <td>
-                <%= lesson.results.count_correct_answer %>
-                <%= t "slash" %>
-                <%= Settings.per_lesson.words %></td>
-              <td class="button_inline">
-                <%= lesson_status lesson %>
-                <%= link_to t("delete"),
-                  lesson_path(lesson),
-                  class: "lesson_button_delete", method: :delete,
-                  data: {confirm: t("delete_message")} %>
-              </td>
-            </tr>
-          <% end %>
-          <%= will_paginate @lessons %>
-        </tbody>
-      </table>
+<div id="wrapper" >
+  <%= render "layouts/menu.html.erb" %>
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel-heading">
+            <h1 class="text-center"><%= t "lessons" %></h1>
+          </div>
+          <div class="table-responsive category_info">
+            <table class="table table-striped table-bordered" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th><%= t "lesson_create_at" %></th>
+                  <th><%= t "lesson_category" %></th>
+                  <th class="text-center"><%= t "lesson_score" %></th>
+                  <th class="text-center"><%= t "lesson_action" %></th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @lessons.each do |lesson| %>
+                  <tr>
+                    <td>
+                      <%= l lesson.created_at, format: :long %>
+                    </td>
+                    <td><%= lesson.category.name %></td>
+                    <td class="text-center">
+                      <%= lesson.results.count_correct_answer %>
+                      <%= t "slash" %>
+                      <%= Settings.per_lesson.words %></td>
+                    <td class="button_inline">
+                      <%= lesson_status lesson %>
+                      <%= link_to t("delete"),
+                        lesson_path(lesson),
+                        class: "btn-flip btn btn-3d btn-danger", method: :delete,
+                        data: {confirm: t("delete_message")} %>
+                    </td>
+                  </tr>
+                <% end %>
+                <%= will_paginate @lessons %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -1,7 +1,6 @@
 class Word < ApplicationRecord
   belongs_to :category
   has_many :lessons, through: :result
-  has_many :answers, dependent: :destroy
   has_many :results
   has_many :answers, dependent: :destroy, inverse_of: :word
 
@@ -13,6 +12,7 @@ class Word < ApplicationRecord
   scope :random, -> do
     order("RANDOM()").limit Settings.per_lesson.words
   end
+
   validates :name, presence: true, length: {maximum: 140}
   validates :content, presence: true
   accepts_nested_attributes_for :answers, allow_destroy: true,

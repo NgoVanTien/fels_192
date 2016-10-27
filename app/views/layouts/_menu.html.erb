@@ -10,7 +10,15 @@
     <li>
       <%= link_to t(:menu_words), words_path %>
     </li>
+    <li>
+      <%= link_to t(:menu_categories), categories_path %>
+    </li>
+    <li>
+      <%= link_to t(:menu_lessons), lessons_path %>
+    </li>
+    <li>
+      <%= link_to t(:menu_activities), user_path(current_user) %>
+    </li>
   </ul>
 </div>
-<!-- /#sidebar-wrapper -->
 <button id="menu-toggle" ><%= t "Menu" %></button>
